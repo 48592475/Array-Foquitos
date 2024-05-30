@@ -49,9 +49,10 @@ public class FoquitoScript : MonoBehaviour
             colors[i].SetActive(false);
         }
     }
-
+    
     public void ActivateRepeating(float t)
     {
+        //instanciar 
         InvokeRepeating(nameof(ActivateNextLight),0,t);
     }
 }
