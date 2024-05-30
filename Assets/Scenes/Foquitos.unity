@@ -867,6 +867,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Foquito
       objectReference: {fileID: 0}
+    - target: {fileID: 1848221054155153698, guid: 35a253c21f425b14bb6b7daf42f82206,
+        type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
     - target: {fileID: 1848221054155586818, guid: 35a253c21f425b14bb6b7daf42f82206,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -952,5 +957,10 @@ PrefabInstance:
       propertyPath: colors.Array.data[4]
       value: 
       objectReference: {fileID: 1752986117}
+    - target: {fileID: 4337743128865692265, guid: 35a253c21f425b14bb6b7daf42f82206,
+        type: 3}
+      propertyPath: secuencia
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 35a253c21f425b14bb6b7daf42f82206, type: 3}

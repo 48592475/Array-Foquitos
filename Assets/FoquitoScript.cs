@@ -7,7 +7,7 @@ public class FoquitoScript : MonoBehaviour
 {
     public GameObject[] colors;
     public int currentLightIndex =-1;
-
+    public int secuencia = 0;
     void Start()
     {
         
@@ -26,9 +26,15 @@ public class FoquitoScript : MonoBehaviour
         if (currentLightIndex >= colors.Length)
         {
             currentLightIndex = 0;
+            secuencia++;
+            if (secuencia >= 3)
+            {
+                borrar();
+            }
         }
         DeactivateAllLights();
         colors[currentLightIndex].SetActive(true);
+        
     }
 
     public void ActivatePreviousLight()
@@ -40,6 +46,7 @@ public class FoquitoScript : MonoBehaviour
         }
         DeactivateAllLights();
         colors[currentLightIndex].SetActive(true);
+        borrar();
     }
 
     void DeactivateAllLights()
@@ -52,7 +59,14 @@ public class FoquitoScript : MonoBehaviour
     
     public void ActivateRepeating(float t)
     {
-        //instanciar 
-        InvokeRepeating(nameof(ActivateNextLight),0,t);
+        //instanciar
+        InvokeRepeating(nameof(ActivateNextLight), 0, t);
+        
+       
     }
+    public void borrar()
+    {
+        Destroy(gameObject);
+    }
+
 }
